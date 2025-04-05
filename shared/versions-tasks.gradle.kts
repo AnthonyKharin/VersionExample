@@ -16,7 +16,7 @@ tasks.register("generateVersionConfig") {
         file(project.rootDir.toString() + "/shared/src/commonMain/kotlin/com/example/VersionConfig.kt")
     outputs.file(configFile)
     val content = """
-            // Не менять файл, он сгенерирован с помощью таски generateVersionConfig
+            // Do not change the file, it is generated using the generateVersionConfig task
             object VersionConfig {
                 const val VERSION_CODE = ${getNumericAppVersion()}
                 const val VERSION_NAME = "${getAppVersionString()}"
